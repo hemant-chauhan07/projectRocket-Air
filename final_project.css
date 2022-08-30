@@ -968,6 +968,7 @@ body {
     .sld{
         height: 13vh;
         width: 100%;
+        border-left: none;
         border-bottom: 0.5px solid #979797;
     }
 
