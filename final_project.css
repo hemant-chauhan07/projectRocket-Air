@@ -63,8 +63,8 @@ body {
     border: 1px solid green;
     border-radius: 100px;
     color: #fff;
-    padding: 8px 30px;
-    margin-top: 2vw;
+    padding: 1vw 1vw 2vw 1.2vw;
+    margin-top: 3.5vw;
     font-size: 12px;
     position: relative;
     overflow: hidden;
@@ -73,6 +73,7 @@ body {
 #nav #links #button span{
     position: relative;
     z-index: 999;
+    margin: 1vw 1vw 1vw 1vw;
 }
 
 #nav #links #button .opening{

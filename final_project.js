@@ -12,6 +12,15 @@ function locomotive() {
 
   locoScroll.on("scroll", ScrollTrigger.update);
 
+  locoScroll.on("scroll", function(dets){
+    if(dets.direction === "up"){
+      document.querySelector("#nav").style.top = "0%";
+    }
+    else if(dets.direction === "down"){
+      document.querySelector("#nav").style.top = "-100%";
+    }
+  })
+
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
