@@ -1,45 +1,4 @@
-// gsap.registerPlugin(ScrollTrigger);
-// function locomoctive(){
 
-//     const locoScroll = new LocomotiveScroll({
-//       el: document.querySelector("#main"),
-//       smooth: true,
-//       tablet: { smooth: true },
-//       smartphone: { smooth: true }
-//     });
-//     locoScroll.on("scroll", ScrollTrigger.update);
-
-//     // locoScroll.on("scroll", function(dets){
-//     //   if(dets.direction === "up"){
-//     //     document.querySelector("nav").style.top = "0%";
-//     //   }
-//     //   else{
-//     //     document.querySelector("nav").style.top = "-100%"
-//     //   }
-//     // })
-
-//     ScrollTrigger.scrollerProxy("#main", {
-//       scrollTop(value) {
-//         return arguments.length
-//           ? locoScroll.scrollTo(value, 0, 0)
-//           : locoScroll.scroll.instance.scroll.y;
-//       },
-//       getBoundingClientRect() {
-//         return {
-//           top: 0,
-//           left: 0,
-//           width: window.innerWidth,
-//           height: window.innerHeight
-//         };
-//       }
-//     });
-
-
-//     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-//     ScrollTrigger.refresh();
-
-// };
 
 
 function locomotive() {
@@ -119,6 +78,46 @@ function slidesHandle() {
 };
 
 
+// function headingAnimator(){
+//   document.querySelectorAll(".allHeadings")
+//         .forEach(function (row) {
+//             row.innerHTML = `<div class="textwrapper">${row.innerHTML}</div>`;
+//         })
+
+
+
+//     document.querySelectorAll(".textwrapper")
+//         .forEach(txt => {
+//             let clutter = "";
+//             txt.textContent.split(" ").forEach(wrd => {
+//                 clutter += `<span>${wrd}</span>`;
+//             })
+
+//             txt.innerHTML = clutter;
+//         })
+
+//         gsap.set(".allHeadings span", {y: "200%"})
+
+//         document.querySelectorAll(".allHeadings")
+//         .forEach(function(elem){
+//             gsap.from(elem, {
+//                 scrollTrigger: {
+//                     scroller: "#main",
+//                     trigger: elem,
+//                     start: "top 60%"
+//                 },
+//                 onStart: function(){
+//                     gsap.to(elem.children[0].children, {
+//                         y: 0,
+//                         ease: Power4,
+//                         duration: .3,
+//                         stagger: .2
+//                     })
+//                 }
+//             })
+//         })
+
+// }
 
 
 
@@ -189,4 +188,5 @@ function animationCode() {
 
 locomotive();
 slidesHandle();
+// headingAnimator();
 animationCode();
